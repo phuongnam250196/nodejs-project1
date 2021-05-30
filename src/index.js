@@ -4,8 +4,7 @@ const path = require('path');
 const app = express();
 const route = require('./routes');
 
-const handleBars  = require('express-handlebars');
- 
+const handleBars = require('express-handlebars');
 
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -13,14 +12,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 // app.use(morgan('combined'));
 
 // handlebars
-app.engine('hbs', handleBars(
-  {extname: '.hbs'}
-));
+app.engine('hbs', handleBars({ extname: '.hbs' }));
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'resource/views'));
 // console.log(path.join(__dirname, 'resources/views'));
 
 // route initial
 route(app);
- 
-app.listen(3000);
+
+      app.listen(3000);
