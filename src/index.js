@@ -15,9 +15,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.engine('hbs', handleBars({ extname: '.hbs' }));
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'resource/views'));
-// console.log(path.join(__dirname, 'resources/views'));
 
 // route initial
 route(app);
 
-      app.listen(3000);
+       app.listen(3000);
