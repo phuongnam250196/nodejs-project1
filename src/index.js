@@ -18,5 +18,5 @@ app.set('views', path.join(__dirname, 'resource/views'));
 
 // route initial
 route(app);
-
+//test
        app.listen(3000);
